@@ -1,11 +1,10 @@
 import {combineReducers} from "redux";
+import tasksReducer from "./tasks"
 
 
 
 const rootReducer = combineReducers({
-
-        test: () => '1',
-
+        tasks: tasksReducer
     }
 );
 
