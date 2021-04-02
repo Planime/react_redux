@@ -22,6 +22,9 @@ const tasksReducer = (state = TASKS.tasks, {type, id, text, isCompleted}) => {
                     isCompleted
                 }
             ];
+        case DELETE_TASK:
+            return state.filter(task => +task.id !== +id );
+
         default: return state
     }
 };

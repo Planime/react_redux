@@ -18,6 +18,20 @@ code {
 
 .form_container {
   width: 50%;
-
 }
 
+#input_container {
+  align-items: center;
+  border: none;
+  box-shadow: none;
+}
+
+#task_btn {
+  margin-top: 10px;
+}
+
+#footer_container{
+  margin-top: 50px;
+  border-radius: 5px;
+  text-align: center;
+}

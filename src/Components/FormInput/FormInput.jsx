@@ -21,13 +21,14 @@ class FormInput extends Component {
     };
 
     render() {
-        return(
-
-                <div className="ui input  container segments aligned center">
+        return (
+            <div className="ui very text container segment">
+                <div className="ui input  container segments aligned center" id="input_container">
                     <div className="ui top header  aligned center segment">Let's create our new task</div>
                     <input ref={this.input} className="ui fluid icon input" type="text" placeholder="To Do task"/>
-                    <button onClick={this.onClickBtn} className='ui primary button'>Let's do it</button>
+                    <button onClick={this.onClickBtn} className='ui primary button' id="task_btn">Let's do it</button>
                 </div>
+            </div>
 
         )
     }
@@ -35,7 +36,7 @@ class FormInput extends Component {
 
 const mapToPropsState = ({tasks}) => {
     return {
-       tasks
+        tasks
     }
 };
 
