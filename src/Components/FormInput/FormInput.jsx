@@ -7,17 +7,33 @@ import {addTask} from "../../actions/actionCreator"
 // here we add task and add it to store
 
 class FormInput extends Component {
-    constructor(props) {
-        super(props);
-        this.input = React.createRef();
-    }
+
+    state = {
+        taskInput: ""
+    } ;
+
+    onChangeHandler = (e) => {
+
+        this.setState(()=> {
+            return {
+                taskInput: e.target.value
+            }
+        })
+    };
 
     onClickBtn = () => {
-        this.props.addTask(
-            Math.random(),
-            this.input.current.value,
-            false
-        )
+        if (this.state.taskInput.length >= 3) {
+            this.props.addTask(
+                Math.random(),
+                this.state.taskInput,
+                false
+            );
+            this.setState(()=>{
+                return{
+                    taskInput: ""
+                }
+            })
+        }
     };
 
     render() {
@@ -25,8 +41,15 @@ class FormInput extends Component {
             <div className="ui very text container segment">
                 <div className="ui input  container segments aligned center" id="input_container">
                     <div className="ui top header  aligned center segment">Let's create our new task</div>
-                    <input ref={this.input} className="ui fluid icon input" type="text" placeholder="To Do task"/>
-                    <button onClick={this.onClickBtn} className='ui primary button' id="task_btn">Let's do it</button>
+                    <input
+                        value={this.state.taskInput}
+                        onChange={this.onChangeHandler}
+                        className="ui fluid icon input"
+                        type="text"
+                        placeholder="To Do task"
+                    />
+                    <button onClick={this.onClickBtn}
+                            className='ui primary button' id="task_btn">Let's do it</button>
                 </div>
             </div>
 

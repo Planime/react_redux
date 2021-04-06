@@ -14,8 +14,6 @@ class Task extends Component {
                 this.props.deleteTask(event.currentTarget.id);
                 break
         }
-
-
     };
 
 

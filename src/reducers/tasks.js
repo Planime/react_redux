@@ -12,7 +12,7 @@ if (!TASKS || !TASKS.tasks?.length) {
 
 const tasksReducer = (state = TASKS.tasks, {type, id, text, isCompleted}) => {
 
-    switch (type){
+    switch (type) {
         case ADD_TASK:
             return [
                 ...state,
@@ -23,11 +23,26 @@ const tasksReducer = (state = TASKS.tasks, {type, id, text, isCompleted}) => {
                 }
             ];
         case DELETE_TASK:
-            return state.filter(task => +task.id !== +id );
+            return state.filter(task => +task.id !== +id);
 
-        default: return state
+
+        case COMPLETE_TASK:
+        return state.map(task => {
+            if (+task.id === +id){
+                return {
+                    id: task.id,
+                    text: task.text,
+                    isCompleted: !task.isCompleted
+                }
+            }
+            return task
+        })
+
+
+
+        default:
+            return state
     }
 };
-
 
 export default tasksReducer;
