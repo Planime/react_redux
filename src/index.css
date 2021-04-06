@@ -35,3 +35,7 @@ code {
   border-radius: 5px;
   text-align: center;
 }
+
+.ui.segment.doneTask {
+  background: #cccccc;
+}
