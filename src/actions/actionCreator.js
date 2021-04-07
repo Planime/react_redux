@@ -2,17 +2,16 @@ import {ADD_TASK, COMPLETE_TASK, DELETE_TASK, INIT_TASK} from "../constans";
 import {load} from "redux-localstorage-simple/dist/index";
 
 
-export const initTask = () => {
-let TASKS = load({namespace: 'todo-list'});
+export const initTask =  () => {
+    return async function(dispatch) {
 
-    if (!TASKS || !TASKS.tasks?.length) {
-        TASKS = {
-            tasks: []
-        }
-    }
-    return {
-        type: INIT_TASK,
-        tasks: TASKS.tasks
+    let response = await fetch("https://5fec128e573752001730b0f1.mockapi.io/todoredux");
+    response = await response.json();
+
+        dispatch({
+            type: INIT_TASK,
+            tasks: response
+        })
     }
 };
 
