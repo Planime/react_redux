@@ -39,3 +39,8 @@ code {
 .ui.segment.doneTask {
   background: #cccccc;
 }
+
+#todo_header
+{
+  margin-top: 20px;
+}

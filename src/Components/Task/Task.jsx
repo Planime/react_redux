@@ -23,7 +23,7 @@ class Task extends Component {
             <div
                 onClick={this.onClickHandler}
                 id={this.props.task.id}
-                className={this.props.task.isCompleted ? "ui raised padded segment" : "ui raised padded segment doneTask" }>
+                className={!this.props.task.isCompleted ? "ui raised padded segment" : "ui raised padded segment doneTask" }>
                 <div className="meta">{this.props.task.text}</div>
 
                 <div
