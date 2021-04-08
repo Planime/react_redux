@@ -4,13 +4,16 @@ import {ADD_TASK, DELETE_TASK, COMPLETE_TASK, INIT_TASK} from "../constans";
 
 
 
-const tasksReducer = (state = [], {type, id, text, isCompleted, tasks}) => {
+const tasksReducer = (state = [], {type, ...action}) => {
 
     switch (type) {
         case INIT_TASK:
-            return tasks;
+            return action.tasks;
 
         case ADD_TASK:
+            console.log(action)
+            const {id, text, isCompleted} = action
+
             return [
                 ...state,
                 {
@@ -20,17 +23,13 @@ const tasksReducer = (state = [], {type, id, text, isCompleted, tasks}) => {
                 }
             ];
         case DELETE_TASK:
-            return state.filter(task => +task.id !== +id);
+            return state.filter(task => +task.id !== +action.id);
 
 
         case COMPLETE_TASK:
         return state.map(task => {
-            if (+task.id === +id){
-                return {
-                    id: task.id,
-                    text: task.text,
-                    isCompleted: !task.isCompleted
-                }
+            if (+task.id === +action.changedTask.id){
+                return action.changedTask
             }
             return task
         });

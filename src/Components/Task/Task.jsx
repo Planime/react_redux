@@ -8,7 +8,8 @@ class Task extends Component {
     onClickHandler = (event) => {
         switch (event.target.getAttribute("data-btn")) {
             case "complete":
-                this.props.completeTask(event.currentTarget.id);
+                this.props.completeTask(event.currentTarget.id, this.props.task.isCompleted);
+
                 break;
             case "delete":
                 this.props.deleteTask(event.currentTarget.id);

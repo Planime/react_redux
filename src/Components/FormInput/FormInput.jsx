@@ -24,7 +24,6 @@ class FormInput extends Component {
     onClickBtn = () => {
         if (this.state.taskInput.length >= 3) {
             this.props.addTask(
-                Math.random(),
                 this.state.taskInput,
                 false
             );

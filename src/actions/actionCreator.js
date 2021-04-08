@@ -15,19 +15,67 @@ export const initTask =  () => {
     }
 };
 
-export const addTask = (id, text, isCompleted) => ({
-    type: ADD_TASK,
-    id,
-    text,
-    isCompleted
-});
+export const addTask = (text, isCompleted) => {
+    return async function(dispatch) {
+        let options = {
+            method: "POST",
+            body: JSON.stringify(
+                {
+                    isCompleted,
+                    text
+                }
+            ),
+            headers: {
+                "Content-Type": "application/json"
+            }
 
-export const deleteTask = (id) => ({
-    type: DELETE_TASK,
-    id
-});
+        };
+        let response = await fetch("https://5fec128e573752001730b0f1.mockapi.io/todoredux", options);
+        response = await response.json();
 
-export const completeTask = (id) => ({
-    type: COMPLETE_TASK,
-    id
-});
+
+        dispatch({
+            type: ADD_TASK,
+            ...response
+        })
+
+    }
+};
+
+export const deleteTask = (id) => {
+  return async function(dispatch) {
+      let options = {
+          method: "DELETE"
+      };
+
+      let response = await fetch(`https://5fec128e573752001730b0f1.mockapi.io/todoredux/${id}`, options);
+      response = await response.json();
+      dispatch({
+          type: DELETE_TASK,
+          id: response.id
+      })
+  }
+};
+
+export const completeTask = (id, isCompleted) => {
+   return async function(dispatch) {
+       let options = {
+           method: "PUT",
+           body: JSON.stringify({
+               isCompleted: !isCompleted
+           }),
+
+           headers: {
+               "Content-Type": "application/json"
+           }
+       };
+       let response = await fetch(`https://5fec128e573752001730b0f1.mockapi.io/todoredux/${id}`, options)
+       response = await response.json();
+
+       dispatch({
+           type: COMPLETE_TASK,
+           changedTask: response
+       })
+
+   }
+};
