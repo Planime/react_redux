@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c7eaa8b-04b3-4f3e-ae5d-07c7cd69d7e8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Tabs/Tabs.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ToDoList/ToDoList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ToDoList/ToDoList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/ToDo/ToDo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/ToDo/ToDo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actionCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actionCreator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constans.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constans.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/tasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Tabs/Tabs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Tabs/Tabs.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
@@ -36,11 +28,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tabs.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Tabs.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/Tabs/Tabs.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="351">
+              <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,15 +70,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="store.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -104,6 +90,15 @@
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actionCreator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/actionCreator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="86" column="7" lean-forward="true" selection-start-line="85" selection-start-column="3" selection-end-line="86" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -160,11 +155,11 @@
         <option value="$PROJECT_DIR$/src/reducers/tasks.js" />
         <option value="$PROJECT_DIR$/src/Container/ToDo/ToDo.jsx" />
         <option value="$PROJECT_DIR$/src/Components/ToDoList/ToDoList.jsx" />
-        <option value="$PROJECT_DIR$/src/Components/Tabs/Tabs.jsx" />
         <option value="$PROJECT_DIR$/src/constans.js" />
         <option value="$PROJECT_DIR$/src/actions/actionCreator.js" />
         <option value="$PROJECT_DIR$/src/reducers/tabs.js" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/Components/Tabs/Tabs.jsx" />
       </list>
     </option>
   </component>
@@ -208,6 +203,12 @@
               <item name="to_do_redux" type="b2602c69:ProjectViewProjectNode" />
               <item name="to_do_redux" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to_do_redux" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to_do_redux" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="to_do_redux" type="b2602c69:ProjectViewProjectNode" />
@@ -305,7 +306,7 @@
       <updated>1617073928943</updated>
       <workItem from="1617073930093" duration="23442000" />
       <workItem from="1617335020593" duration="27720000" />
-      <workItem from="1617944229997" duration="302000" />
+      <workItem from="1617944229997" duration="1135000" />
     </task>
     <task id="LOCAL-00001" summary="add from api">
       <created>1617772404497</created>
@@ -318,7 +319,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51464000" />
+    <option name="totallyTimeSpent" value="52297000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -463,6 +464,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -644,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/actionCreator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1494">
-          <caret line="84" column="36" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/tasks.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
@@ -702,13 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Tabs/Tabs.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Header/Header.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -746,6 +736,23 @@
           <caret line="7" column="17" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="17" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/actionCreator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="86" column="7" lean-forward="true" selection-start-line="85" selection-start-column="3" selection-end-line="86" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Tabs/Tabs.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

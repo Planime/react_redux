@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import {connect} from "react-redux";
+import {changeTab} from "../../actions/actionCreator";
 
 
 class Tabs extends Component {
@@ -6,30 +8,37 @@ class Tabs extends Component {
     onClickTabsHandler = (e) => {
         const btnAttr = e.target.dataset.btn
         if (btnAttr){
-
+            this.props.changeTab(btnAttr)
         }
 
     };
 
     render() {
+        const {activeTab} =this.props
         return (
             <div
                 onClick={this.onClickTabsHandler}
                 className="ui three text tabular container">
                 <button
                     data-btn="all"
-                    className="ui button orange"
+                    className={`ui button ${activeTab === "all" ? 'orange' : null}`}
                 >All
                 </button>
                 <button
                     data-btn="completed"
-                    className="ui button">Completed</button>
+                    className={`ui button ${activeTab === "completed" ? 'orange' : null}`}>Completed</button>
+
                 <button
                     data-btn="uncompleted"
-                    className="ui button">Uncompleted</button>
+                    className={`ui button ${activeTab === "uncompleted" ? 'orange' : null}`}>
+                    Uncompleted</button>
             </div>
         )
     }
 }
 
-export default Tabs
+export default connect(({activeTab}) => {
+    return {activeTab}
+},
+    {changeTab}
+    )(Tabs)
