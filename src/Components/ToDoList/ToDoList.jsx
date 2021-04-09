@@ -14,6 +14,7 @@ class ToDoList extends Component {
 
         return (
             <div className="ui raised very padded text container segment">
+
                 {this.props.tasks.map(task => (
                     <Task
                         key={task.id}

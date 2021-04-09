@@ -11,8 +11,7 @@ const tasksReducer = (state = [], {type, ...action}) => {
             return action.tasks;
 
         case ADD_TASK:
-            console.log(action)
-            const {id, text, isCompleted} = action
+            const {id, text, isCompleted} = action;
 
             return [
                 ...state,

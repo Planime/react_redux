@@ -1,4 +1,4 @@
-import {ADD_TASK, COMPLETE_TASK, DELETE_TASK, INIT_TASK} from "../constans";
+import {ADD_TASK, CHANGE_TAB, COMPLETE_TASK, DELETE_TASK, INIT_TASK} from "../constans";
 import {load} from "redux-localstorage-simple/dist/index";
 
 
@@ -78,4 +78,11 @@ export const completeTask = (id, isCompleted) => {
        })
 
    }
+
 };
+
+
+export const changeTab = (tab) => ({
+    type: CHANGE_TAB,
+    tab
+});
