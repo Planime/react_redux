@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {connect} from 'react-redux';
 import {deleteTask, completeTask} from "../../actions/actionCreator";
-
+import propTypes from "prop-types";
 
 class Task extends Component {
 
@@ -16,7 +16,6 @@ class Task extends Component {
                 break
         }
     };
-
 
     render() {
 
@@ -42,5 +41,17 @@ class Task extends Component {
         )
     }
 }
+
+Task.propTypes = {
+    completeTask: propTypes.func,
+    deleteTask: propTypes.func,
+    task: propTypes.object
+};
+
+Task.defaultProps = {
+    completeTask: () => {},
+    deleteTask: () => {},
+    task: {}
+};
 
 export default connect(null, {deleteTask, completeTask})(Task)

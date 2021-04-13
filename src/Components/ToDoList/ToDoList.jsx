@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import Task from "../Task/Task";
 import {initTask} from "../../actions/actionCreator";
+import PropTypes from "prop-types";
 
 
 class ToDoList extends Component {
@@ -39,6 +40,17 @@ class ToDoList extends Component {
     }
 }
 
+ToDoList.propTypes = {
+    activeTab: PropTypes.string,
+    initTask: PropTypes.func,
+    tasks: PropTypes.arrayOf(PropTypes.object)
+};
+
+ToDoList.defaultProps = {
+    activeTab: "",
+    initTask: () => {},
+    tasks: []
+};
 
 export default connect((state) => {
         return state

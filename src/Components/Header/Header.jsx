@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import PropTypes from "prop-types";
 
 class Header extends Component{
     render () {
@@ -7,6 +8,14 @@ class Header extends Component{
         )
     }
 }
+
+Header.propTypes = {
+    title: PropTypes.string
+};
+
+Header.defaultProps = {
+    title: "Title is missing"
+};
 
 
 export default Header;

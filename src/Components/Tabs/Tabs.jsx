@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {changeTab} from "../../actions/actionCreator";
+import PropTypes from "prop-types";
+
 
 
 class Tabs extends Component {
@@ -37,6 +39,16 @@ class Tabs extends Component {
             </div>
         )
     }
+}
+
+Tabs.propTypes = {
+    activeTab: PropTypes.string,
+    changeTab: PropTypes.func
+};
+
+Tabs.defaultProps = {
+    activeTab: "all",
+    changeTab: () => {}
 }
 
 export default connect(({activeTab}) => {

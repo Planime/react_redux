@@ -64,11 +64,13 @@ const mapToPropsState = ({tasks}) => {
 
 
 FormInput.propTypes = {
-    tasks: PropTypes.arrayOf(PropTypes.object).isRequired
+    tasks: PropTypes.arrayOf(PropTypes.object).isRequired,
+    addTask: PropTypes.func
 };
 
 FormInput.defaultProps = {
-    tasks: []
+    tasks: [],
+    addTask: () => {}
 };
 
 
