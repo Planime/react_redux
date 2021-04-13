@@ -6,15 +6,15 @@ import {changeTab} from "../../actions/actionCreator";
 class Tabs extends Component {
 
     onClickTabsHandler = (e) => {
-        const btnAttr = e.target.dataset.btn
-        if (btnAttr){
+        const btnAttr = e.target.dataset.btn;
+        if (btnAttr) {
             this.props.changeTab(btnAttr)
         }
 
     };
 
     render() {
-        const {activeTab} =this.props
+        const {activeTab} = this.props;
         return (
             <div
                 onClick={this.onClickTabsHandler}
@@ -26,19 +26,21 @@ class Tabs extends Component {
                 </button>
                 <button
                     data-btn="completed"
-                    className={`ui button ${activeTab === "completed" ? 'orange' : null}`}>Completed</button>
+                    className={`ui button ${activeTab === "completed" ? 'orange' : null}`}>Completed
+                </button>
 
                 <button
                     data-btn="uncompleted"
                     className={`ui button ${activeTab === "uncompleted" ? 'orange' : null}`}>
-                    Uncompleted</button>
+                    Uncompleted
+                </button>
             </div>
         )
     }
 }
 
 export default connect(({activeTab}) => {
-    return {activeTab}
-},
+        return {activeTab}
+    },
     {changeTab}
-    )(Tabs)
+)(Tabs)

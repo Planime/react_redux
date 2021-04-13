@@ -10,12 +10,25 @@ class ToDoList extends Component {
         this.props.initTask()
     }
 
-    render() {
+    renderList() {
+        switch (this.props.activeTab) {
+            case "completed":
+                return this.props.tasks.filter(task => task.isCompleted);
+            case "uncompleted":
+                return this.props.tasks.filter(task => !task.isCompleted);
+            default:
+                return this.props.tasks;
+        }
+    }
 
+
+    render() {
+        const filteredTasks = this.renderList();
         return (
+
             <div className="ui raised very padded text container segment">
 
-                {this.props.tasks.map(task => (
+                {filteredTasks.map(task => (
                     <Task
                         key={task.id}
                         task={task}/>
